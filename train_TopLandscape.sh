@@ -18,6 +18,9 @@ extraopts=""
 if [[ "$model" == "ParT" ]]; then
     modelopts="networks/example_ParticleTransformer.py --use-amp --optimizer-option weight_decay 0.01"
     lr="1e-3"
+elif [[ "$model" == "ParTModU" ]]; then
+    modelopts="networks/example_ParticleTransformerModU.py --use-amp --optimizer-option weight_decay 0.01"
+    lr="1e-3"
 elif [[ "$model" == "ParT-FineTune" ]]; then
     modelopts="networks/example_ParticleTransformer_finetune.py --use-amp --optimizer-option weight_decay 0.01"
     lr="1e-4"
